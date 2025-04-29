@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template
+package com.github.toonarmy14.conditionalautopair
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls
