@@ -1,15 +1,24 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.toonarmy14.conditionalautopair</id>
-    <name>conditional-auto-pair</name>
+    <id>com.github.toonarmy14.matchingbrackets</id>
+    <name>Matching Brackets</name>
     <vendor>toonarmy14</vendor>
+    <version>0.0.1</version>
+    <description>
+        Only auto-insert matching brackets or quotes when the next character following the cursor is whitespace.
+    </description>
 
     <depends>com.intellij.modules.platform</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.toonarmy14.conditionalautopair.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-        <postStartupActivity implementation="com.github.toonarmy14.conditionalautopair.startup.MyProjectActivity" />
+    <extensions defaultExtensionNs="com.intellij">\
+        <!-- Hook our TypedHandlerDelegate -->
+
+        <toolWindow factoryClass="com.github.toonarmy14.matchingbrackets.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <typedHandler implementation="com.example.ConditionalTypedHandler"/>
+
+        <postStartupActivity implementation="com.github.toonarmy14.matchingbrackets.startup.MyProjectActivity" />
     </extensions>
 </idea-plugin>
+

@@ -1,9 +1,9 @@
-package com.github.toonarmy14.conditionalautopair.services
+package com.github.toonarmy14.matchingbrackets.services
 
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project
-import com.github.toonarmy14.conditionalautopair.MyBundle
+import com.github.toonarmy14.matchingbrackets.MyBundle
 
 @Service(Service.Level.PROJECT)
 class MyProjectService(project: Project) {

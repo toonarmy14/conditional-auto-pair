@@ -1,4 +1,4 @@
-package com.github.toonarmy14.conditionalautopair.toolWindow
+package com.github.toonarmy14.matchingbrackets.toolWindow
 
 import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
@@ -8,8 +8,8 @@ import com.intellij.openapi.wm.ToolWindowFactory
 import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBPanel
 import com.intellij.ui.content.ContentFactory
-import com.github.toonarmy14.conditionalautopair.MyBundle
-import com.github.toonarmy14.conditionalautopair.services.MyProjectService
+import com.github.toonarmy14.matchingbrackets.MyBundle
+import com.github.toonarmy14.matchingbrackets.services.MyProjectService
 import javax.swing.JButton
 
 

@@ -6,10 +6,10 @@
 
 ## Template ToDo list
 - [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Adjust the [pluginGroup](./gradle.properties) and [pluginName](./gradle.properties), as well as the [id](./src/main/resources/META-INF/plugin.xml) and [sources package](./src/main/kotlin).
-- [ ] Adjust the plugin description in `README` (see [Tips][docs:plugin-description])
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
+- [x] Get familiar with the [template documentation][template].
+- [x] Adjust the [pluginGroup](./gradle.properties) and [pluginName](./gradle.properties), as well as the [id](./src/main/resources/META-INF/plugin.xml) and [sources package](./src/main/kotlin).
+- [x] Adjust the plugin description in `README` (see [Tips][docs:plugin-description])
+- [x] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
 - [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
 - [ ] Set the `MARKETPLACE_ID` in the above README badges. You can obtain it once the plugin is published to JetBrains Marketplace.
 - [ ] Set the [Plugin Signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html?from=IJPluginTemplate) related [secrets](https://github.com/JetBrains/intellij-platform-plugin-template#environment-variables).
@@ -17,11 +17,22 @@
 - [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
 
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+Enable additional options for controlling when "matching" brackets* are automatically inserted in the editor. 
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
+This plugin adds the ability to disable the automatic-insertion of a matching bracket/quotation mark when your cursor is immediatly succeeded by text. Stated another way, *only* insert a matching bracket when the cursor immediately precedes whitespace or is at the end of the line. 
 
-To keep everything working, do not remove `<!-- ... -->` sections. 
+This will be useful if you are like me and don't bother to highlight/select a word you now want to quote or surround with braces and constantly have to delete–a two-handed endeavor on mac–the auto-inserted brace before proceeding. And I'll take all reductions in irritation I can get, no matter how trivial... :)
+
+\* Except where obvious, I will use the term "brackets" generally to include _all_ **"paired delimeters"** `[],(),{},<>,',"`; the four main "bracket family" members as well as single- and double-quotation marks `' "`. \
+\
+If necessary to refer to one of them individually, I'll do so as follows:\
+|symbol|name|
+|:-:|:--|
+|`[]`|square brackets|
+|`()`|parentheses|
+|`{}`|braces|
+|`<>`|angle brackets|
+    
 <!-- Plugin description end -->
 
 ## Installation
